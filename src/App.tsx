@@ -1,12 +1,8 @@
 import "./App.css";
-import Auth from "./pages/Auth";
+import Router from "./router/router";
 
 function App() {
-  return (
-    <>
-      <Auth />
-    </>
-  );
+  return <Router />;
 }
 
 export default App;
