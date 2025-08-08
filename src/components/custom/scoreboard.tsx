@@ -10,17 +10,14 @@ export default function Scoreboard({ socket }: ScoreboardProps) {
 
   useEffect(() => {
     if (!socket) {
-        console.log("NO SOCKET?!?!?!")
         return 
     }
 
     const handleScoreboard = (event: MessageEvent) => {
-      console.log("ASDASDASDASDAS");
       try {
         const msg = JSON.parse(event.data);
         if (msg.event === "Game" && msg.type === "Scoreboard") {
           const parsedData = JSON.parse(msg.data); // msg.data is stringified JSON
-          console.log("BBBB", parsedData);
           setScores(parsedData);
         }
       } catch (err) {

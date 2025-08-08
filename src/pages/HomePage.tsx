@@ -81,10 +81,10 @@ export default function HomePage() {
         <Input ref={nicknameRef} placeholder="Your nickname" />
         <Input ref={matchIdRef} placeholder="Enter Game ID" />
         <div className="flex gap-4">
-          <Button className="grow" onClick={handleJoinGame}>
+          <Button className="grow" onClick={handleJoinGame} variant={"default"}>
             Join Game
           </Button>
-          <Button className="grow" onClick={handleCreateGame}>
+          <Button className="grow" onClick={handleCreateGame} variant={"secondary"}>
             Create New Game
           </Button>
         </div>
